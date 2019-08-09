@@ -6,6 +6,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Playball&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div class="loader_bg">
+		<div class="loader">Whether App<hr id="loader_hr"></div>
+	</div>
 
 	<div class="location">
 		<h1 class="location-timezone">Timezone</h1>
@@ -23,8 +26,14 @@
 	</div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="skycons.js"></script>
+<script type="text/javascript">
+	setTimeout(function(){
+		$('.loader_bg').fadeToggle();
+	},1000);
+</script>
 </body>
 </html>

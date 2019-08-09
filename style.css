@@ -14,6 +14,48 @@ body{
 	font-family: 'Playball', cursive;
 	color:white;
 }
+.loader_bg{
+	background: linear-gradient(rgb(47,150,163),rgb(48,62,143));
+	position: fixed;
+	z-index: 9999;
+	height: 100%;
+	width:100%;
+}
+.loader{
+	position: absolute;
+	top:calc( 50vh - 75px );
+	left:calc( 50vw - 200px );
+	font-size: 80px;
+	animation: loader 2s infinite;
+
+}
+#loader_hr{
+	animation: hr 1s infinite;
+}
+@keyframes hr{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+
+@keyframes loader{
+	0%{
+		top:calc( 50vh -75px );
+	}
+	50%{
+		top:calc( 50vh - 100px );
+	}
+	100%{
+		top:calc( 50vh -75px );
+	}
+}
+
 .location, .temperature{
 	height: 30vh;
 	width: 50%;
